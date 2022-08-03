@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const Contact = require('./models/contact')
 
 router.get('/', (req, res) => {
     res.render('index')
@@ -15,6 +16,10 @@ router.get('/Hobbies', (req, res) => {
 
 router.get('/Things i like', (req, res) => {
     res.render('Things i like')
+})
+
+router.get('/things', (req, res) => {
+    res.render('things')
 })
 
 router.get('/Contact info', (req, res) => {
@@ -37,7 +42,7 @@ router.post('/submitContact', (req, res) => {
 
     Contact.collection.insertOne(contact)
     .then(result => {
-        res.render('contact')
+        res.render('Contact')
     })
     .catch(err => console.log(err));
 })

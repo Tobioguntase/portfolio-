@@ -1,4 +1,4 @@
-const mongoose = reguire('mongoose');
+const mongoose = require('mongoose');
 
 var constactSchema = new mongoose.Schema({
     fname: {
