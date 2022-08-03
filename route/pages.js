@@ -37,7 +37,7 @@ router.post('/submitContact', (req, res) => {
 
     Contact.collection.insertOne(contact)
     .then(result => {
-        res.render('Contact')
+        res.render('contact')
     })
     .catch(err => console.log(err));
 })
