@@ -1,4 +1,4 @@
-const mongo = require('./mongo')
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', route);
 
 
-mongoose.connect(mongo, {useNewURLParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb+srv://tobioguntuase:YIHyYX5mAJFbW40m@cluster0.5cvyzom.mongodb.net/portfolioDB', {useNewURLParser: true, useUnifiedTopology: true})
 .then(() => {
    app.listen(3000, () => {
         console.log("server is running on 3000")
